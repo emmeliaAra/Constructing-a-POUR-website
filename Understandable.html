@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "author" content="Emmeleia Arakleitou">
+    <title> Constructing a POUR website - Understandable</title>
+    <script src="jquery.js"></script>
+    <script>
+      $(function(){
+        $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
+      });
+      </script>
+  </head>
+  <body>
+    <div id="page_header1"></div>
+    <header class="understandable_hder">
+      <div class="understandable">
+        <h2> Understandable </h2>
+        <p>Understandable websites are consistent in its format and presentation, simple and easy to use and comprehend, predictable in its design and usage patterns. Information and user interface are understandable by all users.</p>
+        <div id="under_guid">
+          <h3> Guidelines under “understandable” principle </h3>
+          <ol>
+            <li>Guideline 3.1: Readable content.</li>
+            <li>Guideline 3.2: Predictable webpages.</li>
+            <li>Guideline 3.3: Help users avoid and correct mistakes.</li>
+          </ol>
+        </div>
+        <div id="under_examp">
+          <h3>Examples of "Understandable" websites </h3>
+          <ul>
+            <li>A website that requires the user to fill in a form must inform the users of any errors.</li>
+            <li>A Website must declare the meaning of all abbreviations, acronyms and jargon used. </li>
+            <li>Websites that consists of multiple links must display the links in the same order in every web page so that users don’t need to memorize navigation steps for each web page.</li>
+          </ul>
+        </div>
+        <div id="under_tech">
+          <h3>Techniques to build understandable web sites based on the guidelines</h3>
+          <ol>
+            <li>
+              Provide readable and understandable text
+              <p>Content must be readable and understandable to the broadest possible audience and not just by viewing the content but also when it’s been perceived by other assistive technologies such as screen reader. The Website’s author must:</p>
+              <ol>
+                <li>Programmatically determine the language of the page</li>
+                <li>Provide definitions for technical content and abbreviations</li>
+              </ol>
+              <p> Example: At the start of the html document the author must include this line so that the document language is indicated.</p>
+              <p> &lt;html lang = “document_language”&gt;</p>
+            </li>
+            <li>
+              Make content operate and appear in predictable ways
+              <p>Page navigation should be constant and consistent. This means that the main navigation mechanism must be repeated on multiple pages and appear at the same locations. Also, repeated user interface components must always have the same meaning and different components must have different meanings</p>
+              <p> ADD EXAMPLE</p>
+            </li>
+            <li>
+              Help the users to avoid and correct their mistakes
+              <p>Most common mistakes on a website appear on interactive forms. To help users avoid such mistakes fields must be labelled with clear disruptive text and all the required elements must be indicated. Also, if a form is submitted with error alert the user with adequate error messages to find the error and correct it.</p>
+              <p> ADD EXAMPLE</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </header>
+  </body>
+  </html>

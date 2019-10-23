@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "author" content="Emmeleia Arakleitou">
+    <title> Constructing a POUR website - Perceivable</title>
+    <!--Use a js file to add the header and the content elements to all the files to avoid duplication of code-->
+    <script src="jquery.js"></script>
+    <script>
+    $(function(){
+      $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
+    });
+    </script>
+  </head>
+
+  <body>
+    <div id="page_header1"></div>
+    <header class="robust_hder">
+      <div class="robust">
+        <h2> Robust </h2>
+        <p> Websites must be robust in a way that works reliably on a wide range of user agents, browsers, assistive technologies, mobile devices including elements with old software and hardware. Therefore, users can choose any technology to interact with websites.</p>
+        <div id="rob_guid">
+          <h3> Guideline under "Robust" principle </h3>
+          <ul>
+            <li>Guideline 4.1: Maximize compatibility with current and future user agents, including assistive technologies. </li>
+          </ul>
+        </div>
+        <div id="rob_examp">
+          <h3>Examples of "Robust" websites </h3>
+          <ul>
+            <li>Website that are compatible with all browsers.</li>
+            <li>Websites accessible to assistive technologies such as screen reader or Braille Device etc.</li>
+            <li>Websites that include features for alternative inputs such as keyboard navigation, voice commands etc.</li>
+          </ul>
+        </div>
+        <div id="rob_tech">
+          <h3>Techniques to build robust web sites based on the guidelines</h3>
+          <ul>
+            <li>
+              Content is compatible with current and future user tools
+              <p>This can be achieved with:</p>
+              <ul>
+                <li>Responsive design and cross-browser compatibility (the website content or functionality will not change from browser to browser.)</li>
+                <li>Reliable and interpretable mark-up </li>
+              </ul>
+              <p> EXAMPLE HERE <p>
+            </li>
+            </ul>
+          </div>
+      </div>
+    </header>
+    </body>
+</html>

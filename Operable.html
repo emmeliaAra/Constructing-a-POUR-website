@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name = "author" content="Emmeleia Arakleitou">
+    <title> Constructing a POUR website - Operable</title>
+    <script src="jquery.js"></script>
+    <script>
+      $(function(){
+        $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
+      });
+      </script>
+  </head>
+
+  <body>
+    <div id= "page_header1"></div>
+    <header class="operable_hder">
+      <div class="operable">
+        <h2> Operable </h2>
+        <p>Operable principle states that the user interface and navigation components must be operable by any user despite any disability, hardware, software or technologies that they use. Users can successfully use controls, buttons, navigation and other interactive elements to access the website.</p>
+        <div id="oper_guid">
+          <h3> Guidelines under "Operable" principle</h3>
+          <ul>
+            <li>Guideline 2.1: Keyboard Accessible </li>
+            <li>Guideline 2.2: Provide users enough time to read and use content.</li>
+            <li>Guideline 2.3: Do not design content in a way that is known to cause seizures.</li>
+            <li>Guideline 2.4: Provide ways to help users navigate, find content, and determine where they are.</li>
+          </ul>
+        </div>
+        <div id="oper_examp">
+          <h3>Examples of “Operable” websites </h3>
+          <ul>
+            <li>A navigation menu with a submenu section revealed when a user hovers over it with a mouse must have the same functionality when it receives focus either with the keyboard or any other interactive device.</li>
+            <li>An online form requires multiple sections from a drop-down menu but only applicable by pressing Ctrl + selecting elements from menu. This is not operable as not all users can do these two steps simultaneously.</li>
+          </ul>
+        </div>
+        <div id="oper_tech">
+          <h3> Techniques to build operable web sites based on the guidelines</h3>
+          <ol>
+            <li>
+              Enable keyboard functionality
+              <p>Users must be able to access all functionality that is available by mouse by using a keyboard.Since no pointer is used to indicate focus, ensure that focus is indicated appropriately.</p>
+            </li>
+            <li>
+              Give users time to read and use the content
+              <p>Not everybody reads and types with the same speed. Therefore, allow users to adjust the time limits based on their needs, re-authenticate if the session expires and pause, stop or hide moving/blinking/scrolling content.</p>
+            </li>
+            <li>
+              Avoid content that can cause seizures.
+              <p>Flashes at certain patterns or rates can cause users to have seizures.If possible, flashing content and animations must be avoided otherwise the user must be informed before the content is presented.Alternatives must be provided to perceive the information contained within flashing content or animations.</p>
+            </li>
+            <li>
+              Make navigation easier
+              <p>Clear and well-organized website allow users to navigate effectively. Techniques in this area of site operability include: </p>
+              <ul>
+                <li>Clear page titles</li>
+                <li>Include frequent and clear headers to structure the page</li>
+                <li>Provide descriptive text for links as opposed to “Read More”</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
