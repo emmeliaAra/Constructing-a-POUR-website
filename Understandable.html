@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
+    <link href="StylingProperties.css" rel="stylesheet">
     <title> Constructing a POUR website - Understandable</title>
     <script src="jquery.js"></script>
     <script>
@@ -11,54 +12,68 @@
       });
       </script>
   </head>
+
   <body>
     <div id="page_header1"></div>
+    <div id ="page_content">
     <header class="understandable_hder">
       <div class="understandable">
         <h2> Understandable </h2>
         <p>Understandable websites are consistent in its format and presentation, simple and easy to use and comprehend, predictable in its design and usage patterns. Information and user interface are understandable by all users.</p>
-        <div id="under_guid">
           <h3> Guidelines under “understandable” principle </h3>
           <ol>
             <li>Guideline 3.1: Readable content.</li>
             <li>Guideline 3.2: Predictable webpages.</li>
             <li>Guideline 3.3: Help users avoid and correct mistakes.</li>
           </ol>
-        </div>
-        <div id="under_examp">
           <h3>Examples of "Understandable" websites </h3>
           <ul>
             <li>A website that requires the user to fill in a form must inform the users of any errors.</li>
             <li>A Website must declare the meaning of all abbreviations, acronyms and jargon used. </li>
             <li>Websites that consists of multiple links must display the links in the same order in every web page so that users don’t need to memorize navigation steps for each web page.</li>
           </ul>
-        </div>
-        <div id="under_tech">
           <h3>Techniques to build understandable web sites based on the guidelines</h3>
           <ol>
             <li>
-              Provide readable and understandable text
+              <p class="imp_text">Provide readable and understandable text</p>
               <p>Content must be readable and understandable to the broadest possible audience and not just by viewing the content but also when it’s been perceived by other assistive technologies such as screen reader. The Website’s author must:</p>
               <ol>
                 <li>Programmatically determine the language of the page</li>
                 <li>Provide definitions for technical content and abbreviations</li>
               </ol>
-              <p> Example: At the start of the html document the author must include this line so that the document language is indicated.</p>
-              <p> &lt;html lang = “document_language”&gt;</p>
+              <p class="imp_text">Example: Use the "lang" attribute to denote content in other language other than the specified one</p>
+              <div class="example">
+                <p class="imp_text">At the start of the html document the author must include this line so that the document language is indicated:</p>
+                <p> &lt;html lang = "en"&gt;</p>
+                <p class="imp_text"> To denote include text in other language the lang attribute must used to indicate the language:</p>
+                <p> &lt;blockquote lang="el"&gt;
+                  <br>&emsp;&lt;p&gt;
+                  <br>&emsp;&emsp;Θα πάρω μιαν ανηφοριά, θα πάρω μονοπάτια
+                  <br>&emsp;&emsp;να βρω τα σκαλοπάτια που παν στη λευτεριά.
+                  <br>&emsp;&emsp;Θ” αφήσω αδέλφια, συγγενείς, τη μάνα, τον πατέρα
+                  <br>&emsp;&emsp;μες στα λαγκάδια πέρα και τις βουνοπλαγιές.
+                  <br>&emsp;&lt;/p&gt;
+                  <br>&lt;/blockquote&gt;
+                </p>
+              </div>
             </li>
             <li>
-              Make content operate and appear in predictable ways
-              <p>Page navigation should be constant and consistent. This means that the main navigation mechanism must be repeated on multiple pages and appear at the same locations. Also, repeated user interface components must always have the same meaning and different components must have different meanings</p>
-              <p> ADD EXAMPLE</p>
+              <p class="imp_text">Make content operate and appear in predictable ways</p>
+              <p>Page navigation should be constant and consistent. This means that the main navigation mechanism must be repeated on multiple pages and appear at the same locations. Repeated user interface components must always have the same meaning and different components must have different meanings.Also changes in the website may happen only with the user's concent.</p>
+              <p class="imp_text"> EXAMPLE: Inform the user in advance that an action will create a pop-up window</p>
+              <div class="example">
+                <img src="images/warning.jpg" alt = "Example of a pop-up warning on button click">
+              </div>
             </li>
             <li>
-              Help the users to avoid and correct their mistakes
+              <p class="imp_text">Help the users to avoid and correct their mistakes</p>
               <p>Most common mistakes on a website appear on interactive forms. To help users avoid such mistakes fields must be labelled with clear disruptive text and all the required elements must be indicated. Also, if a form is submitted with error alert the user with adequate error messages to find the error and correct it.</p>
-              <p> ADD EXAMPLE</p>
+              <p class="imp_text">EXAMPLE: Error idication to user when submitting a form</p>
+              <p class="example"> In the case that the user submits a form with invalid information in any of the fields, the server must retain the content of the form and return it indicating that an error occured.The error must be clearly described and the field that the error appeared myst be indicated so that the user can correrct the mistake easily.</p>
             </li>
           </ol>
-        </div>
       </div>
     </header>
+  </div>
   </body>
   </html>

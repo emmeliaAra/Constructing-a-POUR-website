@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
+    <link href="StylingProperties.css" rel="stylesheet">
     <title> Constructing a POUR website - Operable</title>
     <script src="jquery.js"></script>
     <script>
@@ -13,54 +14,81 @@
   </head>
 
   <body>
-    <div id= "page_header1"></div>
-    <header class="operable_hder">
-      <div class="operable">
-        <h2> Operable </h2>
-        <p>Operable principle states that the user interface and navigation components must be operable by any user despite any disability, hardware, software or technologies that they use. Users can successfully use controls, buttons, navigation and other interactive elements to access the website.</p>
-        <div id="oper_guid">
-          <h3> Guidelines under "Operable" principle</h3>
-          <ul>
-            <li>Guideline 2.1: Keyboard Accessible </li>
-            <li>Guideline 2.2: Provide users enough time to read and use content.</li>
-            <li>Guideline 2.3: Do not design content in a way that is known to cause seizures.</li>
-            <li>Guideline 2.4: Provide ways to help users navigate, find content, and determine where they are.</li>
-          </ul>
+    <div id="page_header1"></div>
+    <div id ="page_content">
+      <header class="operable_hder">
+        <div class="operable">
+          <h2> Operable </h2>
+          <p>Operable principle states that the user interface and navigation components must be operable by any user despite any disability, hardware, software or technologies that they use. Users can successfully use controls, buttons, navigation and other interactive elements to access the website.</p>
+            <h3> Guidelines under "Operable" principle</h3>
+            <ul>
+              <li>Guideline 2.1: Keyboard Accessible </li>
+              <li>Guideline 2.2: Provide users enough time to read and use content.</li>
+              <li>Guideline 2.3: Do not design content in a way that is known to cause seizures.</li>
+              <li>Guideline 2.4: Provide ways to help users navigate, find content, and determine where they are.</li>
+            </ul>
+            <h3>Examples of “Operable” websites </h3>
+            <ul>
+              <li>A navigation menu with a submenu section revealed when a user hovers over it with a mouse must have the same functionality when it receives focus either with the keyboard or any other interactive device.</li>
+              <li>An online form requires multiple sections from a drop-down menu but only applicable by pressing Ctrl + selecting elements from menu. This is not operable as not all users can do these two steps simultaneously.</li>
+            </ul>
+
+            <h3> Techniques to build operable web sites based on the guidelines</h3>
+            <ol>
+              <li>
+                <p class="imp_text"> Enable keyboard functionality</p>
+                <p>Users must be able to access all functionality that is available by mouse by using a keyboard.Since no pointer is used to indicate focus, ensure that focus is indicated appropriately.</p>
+                <p class="imp_text"> Example: Use both mouse and keyboard handlers to update an image </p>
+                <div class="example">
+                  <p class="text_inline">  &lt; href="https://www.w3.org/wai"</p>
+                  <p class="imp_text text_inline"> onmouseover</p>
+                  <p class="text_inline"> ="updateImage('wai', true);" <br>&emsp; </p>
+                  <p class="imp_text text_inline"> onfocus</p>
+                  <p class="text_inline"> ="updateImage('wai', true); </p>
+                  <p class="imp_text text_inline">"onmouseout= </p>
+                  <p class="text_inline"> "updateImage('wai',false);" <br>&emsp;</p>
+                  <p class="text_inline imp_text"> onblur </p>
+                  <p class="text_inline">="updateImage('wai',false);"&gt; &lt;img src="greyplus.gif" border="0" alt="" id="wai"&gt; &lt;/a&gt;</p>
+                </div>
+              </li>
+              <li>
+                <p class="imp_text">Give users time to read and use the content</p>
+                <p>Not everybody reads and types with the same speed. Therefore, allow users to adjust the time limits based on their needs, re-authenticate if the session expires and pause, stop or hide moving/blinking/scrolling content.</p>
+                <p class="imp_text"> EXAMPLE: Retain session data for re-authentication</p>
+                <p class= "example"> Retain session data if a session times out for security reasons before the user finishes a task. Allow the user to log-in again and if done successfully retreive the data for the user otherwise discard the data.</p>
+              </li>
+              <li>
+                <p class="imp_text">Avoid content that can cause seizures.</p>
+                <p>Flashes at certain patterns or rates can cause users to have seizures.If possible, flashing content and animations must be avoided otherwise the user must be informed before the content is presented.Alternatives must be provided to perceive the information contained within flashing content or animations.</p>
+                <p class="imp_text"> Example: Allow users to indicate their motion preference in User Interfaces </p>
+                <div class="example">
+                  <p class="text_inline">  @media </p>
+                  <p class="imp_text text_inline">(prefers-reduced-motion: reduce)</p><p class="text_inline"> { </p>
+                  <p> &emsp;.animation { <br> &emsp;&emsp;  animation: none; <br> &emsp;} <br>}</p>
+                </div>
+              </li>
+              <li>
+                <p class="imp_text">Make navigation easier.</p>
+                <p>Clear and well-organized website allow users to navigate effectively. Techniques in this area of site operability include: </p>
+                <ul>
+                  <li>Clear page titles</li>
+                  <li>Include frequent and clear headers to structure the page</li>
+                  <li>Provide descriptive text for links as opposed to “Read More”</li>
+                </ul>
+                <p class="imp_text"> EXAMPLE: Example: Correct tabindexes to specify an alternative way to navigat content </p>
+                <div class="example">
+                  <p> The list is navigated by the tab key in the order Homepage, Chapter 1, Chapter 2, Chapter 3, which it does follows the sequence of the content.</p>
+                  <p> &lt;ol&gt;
+                      <br>&lt;li&gt;&lt;a href="main.html" tabindex="1"&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+                      <br>&lt;li&gt;&lt;a href="chapter1.html" tabindex="2"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+                      <br>&lt;li&gt;&lt;a href="chapter2.html" tabindex="3"&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
+                      <br>&lt;li&gt;&lt;a href="chapter3.html" tabindex="4"&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
+                      <br>&lt;/ol&gt;</p>
+                </div>
+              </li>
+            </ol>
         </div>
-        <div id="oper_examp">
-          <h3>Examples of “Operable” websites </h3>
-          <ul>
-            <li>A navigation menu with a submenu section revealed when a user hovers over it with a mouse must have the same functionality when it receives focus either with the keyboard or any other interactive device.</li>
-            <li>An online form requires multiple sections from a drop-down menu but only applicable by pressing Ctrl + selecting elements from menu. This is not operable as not all users can do these two steps simultaneously.</li>
-          </ul>
-        </div>
-        <div id="oper_tech">
-          <h3> Techniques to build operable web sites based on the guidelines</h3>
-          <ol>
-            <li>
-              Enable keyboard functionality
-              <p>Users must be able to access all functionality that is available by mouse by using a keyboard.Since no pointer is used to indicate focus, ensure that focus is indicated appropriately.</p>
-            </li>
-            <li>
-              Give users time to read and use the content
-              <p>Not everybody reads and types with the same speed. Therefore, allow users to adjust the time limits based on their needs, re-authenticate if the session expires and pause, stop or hide moving/blinking/scrolling content.</p>
-            </li>
-            <li>
-              Avoid content that can cause seizures.
-              <p>Flashes at certain patterns or rates can cause users to have seizures.If possible, flashing content and animations must be avoided otherwise the user must be informed before the content is presented.Alternatives must be provided to perceive the information contained within flashing content or animations.</p>
-            </li>
-            <li>
-              Make navigation easier
-              <p>Clear and well-organized website allow users to navigate effectively. Techniques in this area of site operability include: </p>
-              <ul>
-                <li>Clear page titles</li>
-                <li>Include frequent and clear headers to structure the page</li>
-                <li>Provide descriptive text for links as opposed to “Read More”</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </header>
+      </header>
+  </div>
   </body>
 </html>

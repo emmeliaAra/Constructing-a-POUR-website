@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
+    <link href="StylingProperties.css" rel="stylesheet">
     <title> Constructing a POUR website - Perceivable</title>
     <!--Use a js file to add the header and the content elements to all the files to avoid duplication of code-->
     <script src="jquery.js"></script>
@@ -15,76 +16,84 @@
 
   <body>
     <div id="page_header1"></div>
-    <header class="perceivableHder">
-      <div class="perceivable">
-        <h2> Perceivable </h2>
-        <p> Perceivable principle states that information and user interface must be available to the users in a way they can perceive. The majority of users perceive the web content primarily visually, but other might use hearing or touch senses. Nowadays, new emerging technologies may include sensors from smells and taste as well.</p>
-        <div id="perc_guid">
-          <h3> Guidelines under "Perceivable" principle </h3>
-          <ul>
-            <li> Guideline 1.1: Text Alternatives</li>
-            <li> Guideline 1.2: Time-based media</li>
-            <li> Guideline 1.3: Adaptable Content </li>
-            <li> Guideline 1.4: Distinguishable Content</li>
-          </ul>
-        </div>
-        <div id="perc_examp">
-          <h3> Examples of “Perceivable” websites </h3>
-          <ul>
-            <li>A website contains a chart diagram that contains vital information. The information contained within the chart diagram must be provided in other forms so that is not only visually perceivable.</li>
-            <li>A website must have sufficient contrast so that the background can be distinguished from the text by all users including colour-blind and low-vision users. </li>
-          </ul>
-        </div>
-        <div id="perc_tech">
-          <h3> Techniques to build perceivable web sites based on the guidelines</h3>
-          <ol>
-            <li>
-              Provide text alternatives for non-text content. (Guideline 1.1)
-              <ul>
-                <li>Iincludes equivalents for images, buttons, icons, charts, video and audio</li>
-                <li>In case of an image the “alt” tag must provide a text alternative equivalent to that image. If the image has no valuable meaning the “alt” tag must remain empty. The words within the alt text must be concise and on point.</li>
-                <li>Useful for users with visual impairments and use assistive technologies such as screen reader and improves search engine optimization. Also useful with slow internet connection.</li>
-              </ul>
-            <p>EXAMPLE !!!!!!!! this will be in a container and the text will be next to the image. </p>
-            <img src = "images/sunny_intervals.jpg" alt = "need to figure this out!!!!!!!!!!!11">
-            <p> &lt; img src = example_pict.jpg alt = "sunny intervals" &gt;</p>
-            </li>
-            <li>
-              Provide captions and other alternatives for multimedia. (Guideline 1.2)
-              <ul>
-                <li>Time-based media such as video or audio, must be supported in other forms so that users can convey the information in multiple ways.</li>
-                <li>Captions, transcripts, sign language are other forms that users can convey the information of time-based media.</li>
-              </ul>
-            </li>
-            <li>
-              Present content in different ways (Guideline 1.3)
-              <ul>
-                <li> Need to consider what content will look like if we remove the styling.</li>
-                <li> Headings, lists, tables, input fields and content structures must be marked-up so that users can convey the same information as when styling is applied. </li>
-                <li> Content must be compatible with assistive technologies</li>
-              </ul>
-                <p> EXAMPLE !!!! </p>
-                <p>Most websites include navigation links into the header.  Include a skip navigation link at the top of the document so that the users can skip over these links when CSS is not available.</p>
-                <p>Illustration: HTML File </p>
-                <p> &lt; a href = “#mainContent” &gt; Skip to main content &lt;/a&gt;</p>
-                <p> In the CSS file we can visually hide this link but still make it available for keyboards and CSS-less users:</p>
-                <p>.skipNavigation{Boarder:0;clip:rect(1px,1px,1px,1px);overflow:hidden;padding:0;position:absolute;heigh:1px;width:1px;}</p>
-            </li>
-            <li>
-              Make content easier to see and hear (Guideline 1.4)
-              <ul>
-                <li>We need to make content distinguishable </li>
-                <li>Some Good practises to make distinguishable content are:</li>
+    <div id ="page_content"><!--pageContent-->
+      <header class="perceivableHder">
+        <div class="perceivable"> <!--perceivable-->
+          <h2> Perceivable </h2>
+          <p> Perceivable principle states that information and user interface must be available to the users in a way they can perceive. The majority of users perceive the web content primarily visually, but other might use hearing or touch senses. Nowadays, new emerging technologies may include sensors from smells and taste as well.</p>
+          <div>
+            <h3> Guidelines under "Perceivable" principle </h3>
+            <ul>
+              <li> Guideline 1.1: Text Alternatives</li>
+              <li> Guideline 1.2: Time-based media</li>
+              <li> Guideline 1.3: Adaptable Content </li>
+              <li> Guideline 1.4: Distinguishable Content</li>
+            </ul>
+          </div>
+          <div>
+            <h3> Examples of “Perceivable” websites </h3>
+            <ul>
+              <li>A website contains a chart diagram that contains vital information. The information contained within the chart diagram must be provided in other forms so that is not only visually perceivable.</li>
+              <li>A website must have sufficient contrast so that the background can be distinguished from the text by all users including colour-blind and low-vision users. </li>
+            </ul>
+          </div>
+            <h3> Techniques to build perceivable web sites based on the guidelines</h3>
+            <ol>
+              <li>
+                <p class="imp_text">  Provide text alternatives for non-text content. (Guideline 1.1)</p>
                 <ul>
-                  <li>Don’t use colour as the only way for conveying information</li>
-                  <li>High contrast level between foreground and background.</li>
-                  <li>Allow users to resize text without loss of content or functionality</li>
+                  <li>Iincludes equivalents for images, buttons, icons, charts, video and audio</li>
+                  <li>In case of an image the “alt” tag must provide a text alternative equivalent to that image. If the image has no valuable meaning the “alt” tag must remain empty. The words within the alt text must be concise and on point.</li>
+                  <li>Useful for users with visual impairments and use assistive technologies such as screen reader and improves search engine optimization. Also useful with slow internet connection.</li>
                 </ul>
-              </ul>
-            </li>
-          </ol>
-        </div>
-    </div>
-    </header>
+                <p class="imp_text"> EXAMPLE: Providing alt text for image </p>
+                <div id="per_tech1_example" class="example" >
+                  <img src = "images/sunny_intervals.jpg" alt = "Example image with sunny intervals">
+                  <p> &lt; body &gt; <br> &emsp; &lt;img src = example_pict.jpg alt = "sunny intervals" &gt;<br> &lt; /body &gt; <p>
+                </div><br>
+              </li>
+              <li>
+                <p class="imp_text">Provide captions and other alternatives for multimedia. (Guideline 1.2)</p>
+                <ul>
+                  <li>Time-based media such as video or audio, must be supported in other forms so that users can convey the information in multiple ways.</li>
+                  <li>Captions, transcripts, sign language are other forms that users can convey the information of time-based media.</li>
+                </ul>
+                <p class="imp_text"> EXAMPLE: Default captions</p>
+                <p class="example"> Some online applications automatically inlcude captions into movies to ensure that users that do not know how to turn on captions will be able to view the movie</p>
+              </li>
+              <li>
+                <p class="imp_text">Present content in different ways (Guideline 1.3)</p>
+                <ul>
+                  <li> Need to consider what content will look like if we remove the styling.</li>
+                  <li> Headings, lists, tables, input fields and content structures must be marked-up so that users can convey the same information as when styling is applied. </li>
+                  <li> Content must be compatible with assistive technologies</li>
+                </ul>
+                  <p class="imp_text"> EXAMPLE: Include a skip navigation link at the top of the document so that the users can skip over the navigation links that are placed into the header when CSS is not available.</p>
+                  <div id="per_tech3_example" class="example">
+                    <p class="imp_text">Illustration: HTML File </p>
+                    <p> &lt; a href = “#mainContent” &gt; Skip to main content &lt;/a&gt;</p>
+                    <p class="imp_text"> In the CSS file we can visually hide this link but still make it available for keyboards and CSS-less users:</p>
+                    <p>.skipNavigation{ <br> Boarder:0;<br>clip:rect(1px,1px,1px,1px);<br>overflow:hidden;<br>padding:0;<br>position:absolute;<br>heigh:1px;<br>width:1px;<br>}</p>
+                  </div><br>
+              </li>
+              <li>
+                <p class="imp_text">Make content easier to see and hear (Guideline 1.4)</p>
+                <ul>
+                  <li>We need to make content distinguishable </li>
+                  <li>Some Good practises to make distinguishable content are:</li>
+                  <ul>
+                    <li>Don’t use colour as the only way for conveying information</li>
+                    <li>High contrast level between foreground and background.</li>
+                    <li>Allow users to resize text without loss of content or functionality</li>
+                  </ul>
+                </ul>
+                <p class="imp_text"> EXAMPLE: Use background and foreground colors with contrast ration at least 4.5.1. Some good combinations </p>
+                  <img src = "images/B&W.jpg" alt = "Blue and white contrast">
+                  <img src = "images/B&Y.jpg" alt = "Black and yellow contrast">
+              </li>
+            </ol>
+          </div> <!--perceivable-->
+        </header>
+      </div><!--PAGECONTENT-->
   </body>
   </html>
