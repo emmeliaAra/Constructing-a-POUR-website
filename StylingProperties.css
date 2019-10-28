@@ -26,34 +26,11 @@ header p{
   font-style: italic;
 }
 
-div.content_list{
-  position:fixed;
-	width: auto;
-	top: 100px;
-	bottom: 0;
-  background-color:#6D8CCD;
-  color: #000000;
-  font-family:sans-serif,"Times New Roman","Arial Black",serif;
-}
-
 #page_content{
   display: block;
   position: absolute;
   top:100px;
   left: 230px;
-}
-
-.content_list a:link {
-	color: #000000;
-}
-.content_list a:visited {
-	color: #000000;
-}
-.content_list a:hover {
-	color:#FFFFFF;
-}
-.content_list  a:active {
-	color: #000000;
 }
 
 .imp_text {
@@ -93,4 +70,61 @@ div.content_list{
 .understandable img{
     position: relative;
     padding-left: 200px;
+}
+
+
+/*FOR CONTENT LIST */
+
+.content_list{
+  display: block;
+  position:fixed;
+	width: 200px;
+	top: 100px;
+	bottom: 0;
+  background-color:#6D8CCD;
+  color: #000000;
+  font-family:sans-serif,"Times New Roman","Arial Black",serif;
+}
+
+/* Style the sidenav links and the dropdown button */
+.content_list a, .dropdown-btn {
+  display: block;
+  width: 100%;
+  padding: 5px 8px 5px 8px;
+  font-size: 20px;
+  color: #000000;
+  width: 100%;
+  text-align: left;
+  /*Remove the underline from the links and the boarder and fillins of the buttons.*/
+  text-decoration: none;
+  border: none;
+  background: none;
+  outline: none;
+  /*Creates the small hand on the screen when hovering over a link or a button*/
+  cursor: pointer;
+}
+
+
+/* Dropdown container (hidden by default).*/
+.dropdown_content {
+  display: none;
+  background-color: #9FB6DF;
+  padding-left: 8px;
+}
+
+.content_list a:link {
+	color: #000000;
+}
+.content_list a:visited {
+	color: #000000;
+}
+.content_list a:hover {
+	color:#FFFFFF;
+}
+.content_list  a:active {
+	color: #000000;
+}
+
+.fa-caret-down{
+  padding-left: 5px;
 }

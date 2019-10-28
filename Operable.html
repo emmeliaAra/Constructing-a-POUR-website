@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
     <link href="StylingProperties.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> Constructing a POUR website - Operable</title>
-    <script src="jquery.js"></script>
-    <script>
-      $(function(){
-        $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
-      });
-      </script>
   </head>
 
   <body>
-    <div id="page_header1"></div>
+
     <div id ="page_content">
       <header class="operable_hder">
         <div class="operable">
           <h2> Operable </h2>
           <p>Operable principle states that the user interface and navigation components must be operable by any user despite any disability, hardware, software or technologies that they use. Users can successfully use controls, buttons, navigation and other interactive elements to access the website.</p>
+          <div id="oper_guid">
             <h3> Guidelines under "Operable" principle</h3>
             <ul>
               <li>Guideline 2.1: Keyboard Accessible </li>
@@ -27,12 +23,15 @@
               <li>Guideline 2.3: Do not design content in a way that is known to cause seizures.</li>
               <li>Guideline 2.4: Provide ways to help users navigate, find content, and determine where they are.</li>
             </ul>
+          </div>
+          <div id="oper_examp">
             <h3>Examples of “Operable” websites </h3>
             <ul>
               <li>A navigation menu with a submenu section revealed when a user hovers over it with a mouse must have the same functionality when it receives focus either with the keyboard or any other interactive device.</li>
               <li>An online form requires multiple sections from a drop-down menu but only applicable by pressing Ctrl + selecting elements from menu. This is not operable as not all users can do these two steps simultaneously.</li>
             </ul>
-
+          </div>
+          <div id="oper_guid">
             <h3> Techniques to build operable web sites based on the guidelines</h3>
             <ol>
               <li>
@@ -87,8 +86,63 @@
                 </div>
               </li>
             </ol>
+          </div>
         </div>
       </header>
-  </div>
+    </div>
+    <header class = "page_header1">
+      <h1> Constructing a POUR website</h1>
+      <p> by Emmeleia Arakleitou</p>
+    </header>
+    <div class="content_list">
+        <button class="dropdown-btn">Web Accessibility<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown_content">
+          <a href="AccessibilityPrinciples.html#what_is_web_acc"> What is web Accessibility</a>
+          <a href="AccessibilityPrinciples.html#importance_of_acc"> Motivations</a>
+          <a href="AccessibilityPrinciples.html#wai"> WAI </a>
+        </div>
+        <button class="dropdown-btn">Perceivable<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown_content">
+          <a href="Perceivable.html#per_guid"> Guidelines</a>
+          <a href="Perceivable.html#perc_examp">Examples</a>
+          <a href="Perceivable.html#perc_tech">Techniques</a>
+        </div>
+        <button class="dropdown-btn">Operable<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown_content">
+          <a href="Operable.html#oper_guid">Guidelines</a>
+          <a href="Operable.html#oper_examp">Examples</a>
+          <a href="Operable.html#oper_tech"> Techniques</a>
+        </div>
+        <button class="dropdown-btn">Understandable<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown_content">
+          <a href="Understandable.html#under_guid">Guidelines</a>
+          <a href="Understandable.html#under_examp">Examples</a>
+          <a href="Understandable.html#under_tech"> Techniques</a>
+        </div>
+        <button class="dropdown-btn">Robust<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown_content">
+          <a href="Robust.html#rob_guid">Guidelines</a>
+          <a href="Robust.html#rob_examp">Examples</a>
+          <a href="Robust.html#rob_tech">Techniques</a>
+        </div>
+      </div>
+
+    <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
   </body>
 </html>

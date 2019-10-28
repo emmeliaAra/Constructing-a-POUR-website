@@ -4,33 +4,30 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
     <link href="StylingProperties.css" rel="stylesheet">
-    <title> Constructing a POUR website - Perceivable</title>
-    <!--Use a js file to add the header and the content elements to all the files to avoid duplication of code-->
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
-    });
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <div id="page_header1"></div>
     <div id ="page_content">
     <header class="robust_hder">
       <div class="robust">
         <h2> Robust </h2>
         <p> Websites must be robust in a way that works reliably on a wide range of user agents, browsers, assistive technologies, mobile devices including elements with old software and hardware. Therefore, users can choose any technology to interact with websites.</p>
+        <div id="rob_guid">
           <h3> Guideline under "Robust" principle </h3>
           <ul>
             <li>Guideline 4.1: Maximize compatibility with current and future user agents, including assistive technologies. </li>
           </ul>
+        </div>
+        <div id="rob_examp">
           <h3>Examples of "Robust" websites </h3>
           <ul>
             <li>Website that are compatible with all browsers.</li>
             <li>Websites accessible to assistive technologies such as screen reader or Braille Device etc.</li>
             <li>Websites that include features for alternative inputs such as keyboard navigation, voice commands etc.</li>
           </ul>
+        </div>
+        <div id="rob_tech">
           <h3>Techniques to build robust web sites based on the guidelines</h3>
           <ul>
             <li>
@@ -43,8 +40,65 @@
               <p class="imp_text"> EXAMPLE: Use of online validation tools to check validity of the HTML pages and ensure mark-up reliability <p>
             </li>
             </ul>
+          </div>
       </div>
     </header>
   </div>
+
+  <header class = "page_header1">
+    <h1> Constructing a POUR website</h1>
+    <p> by Emmeleia Arakleitou</p>
+  </header>
+  <div class="content_list">
+      <button class="dropdown-btn">Web Accessibility<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="AccessibilityPrinciples.html#what_is_web_acc"> What is web Accessibility</a>
+        <a href="AccessibilityPrinciples.html#importance_of_acc"> Motivations</a>
+        <a href="AccessibilityPrinciples.html#wai"> WAI </a>
+      </div>
+      <button class="dropdown-btn">Perceivable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Perceivable.html#per_guid"> Guidelines</a>
+        <a href="Perceivable.html#perc_examp">Examples</a>
+        <a href="Perceivable.html#perc_tech">Techniques</a>
+      </div>
+      <button class="dropdown-btn">Operable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Operable.html#oper_guid">Guidelines</a>
+        <a href="Operable.html#oper_examp">Examples</a>
+        <a href="Operable.html#oper_tech"> Techniques</a>
+      </div>
+      <button class="dropdown-btn">Understandable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Understandable.html#under_guid">Guidelines</a>
+        <a href="Understandable.html#under_examp">Examples</a>
+        <a href="Understandable.html#under_tech"> Techniques</a>
+      </div>
+      <button class="dropdown-btn">Robust<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Robust.html#rob_guid">Guidelines</a>
+        <a href="Robust.html#rob_examp">Examples</a>
+        <a href="Robust.html#rob_tech">Techniques</a>
+      </div>
+    </div>
+
+  <script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
     </body>
 </html>

@@ -4,24 +4,17 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
     <link href="StylingProperties.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> Constructing a POUR website - Perceivable</title>
-    <!--Use a js file to add the header and the content elements to all the files to avoid duplication of code-->
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
-    });
-    </script>
   </head>
 
   <body>
-    <div id="page_header1"></div>
     <div id ="page_content"><!--pageContent-->
       <header class="perceivableHder">
         <div class="perceivable"> <!--perceivable-->
           <h2> Perceivable </h2>
           <p> Perceivable principle states that information and user interface must be available to the users in a way they can perceive. The majority of users perceive the web content primarily visually, but other might use hearing or touch senses. Nowadays, new emerging technologies may include sensors from smells and taste as well.</p>
-          <div>
+          <div id="per_guid">
             <h3> Guidelines under "Perceivable" principle </h3>
             <ul>
               <li> Guideline 1.1: Text Alternatives</li>
@@ -30,13 +23,14 @@
               <li> Guideline 1.4: Distinguishable Content</li>
             </ul>
           </div>
-          <div>
+          <div id="perc_examp">
             <h3> Examples of “Perceivable” websites </h3>
             <ul>
               <li>A website contains a chart diagram that contains vital information. The information contained within the chart diagram must be provided in other forms so that is not only visually perceivable.</li>
               <li>A website must have sufficient contrast so that the background can be distinguished from the text by all users including colour-blind and low-vision users. </li>
             </ul>
           </div>
+          <div id="per_guid">
             <h3> Techniques to build perceivable web sites based on the guidelines</h3>
             <ol>
               <li>
@@ -92,8 +86,65 @@
                   <img src = "images/B&Y.jpg" alt = "Black and yellow contrast">
               </li>
             </ol>
-          </div> <!--perceivable-->
+          </div>
+        </div> <!--perceivable-->
         </header>
       </div><!--PAGECONTENT-->
+
+      <header class = "page_header1">
+        <h1> Constructing a POUR website</h1>
+        <p> by Emmeleia Arakleitou</p>
+      </header>
+      <div class="content_list">
+          <button class="dropdown-btn">Web Accessibility<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown_content">
+            <a href="AccessibilityPrinciples.html#what_is_web_acc"> What is web Accessibility</a>
+            <a href="AccessibilityPrinciples.html#importance_of_acc"> Motivations</a>
+            <a href="AccessibilityPrinciples.html#wai"> WAI </a>
+          </div>
+          <button class="dropdown-btn">Perceivable<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown_content">
+            <a href="Perceivable.html#per_guid"> Guidelines</a>
+            <a href="Perceivable.html#perc_examp">Examples</a>
+            <a href="Perceivable.html#perc_tech">Techniques</a>
+          </div>
+          <button class="dropdown-btn">Operable<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown_content">
+            <a href="Operable.html#oper_guid">Guidelines</a>
+            <a href="Operable.html#oper_examp">Examples</a>
+            <a href="Operable.html#oper_tech"> Techniques</a>
+          </div>
+          <button class="dropdown-btn">Understandable<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown_content">
+            <a href="Understandable.html#under_guid">Guidelines</a>
+            <a href="Understandable.html#under_examp">Examples</a>
+            <a href="Understandable.html#under_tech"> Techniques</a>
+          </div>
+          <button class="dropdown-btn">Robust<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown_content">
+            <a href="Robust.html#rob_guid">Guidelines</a>
+            <a href="Robust.html#rob_examp">Examples</a>
+            <a href="Robust.html#rob_tech">Techniques</a>
+          </div>
+        </div>
+
+      <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+        });
+      }
+      </script>
+
   </body>
   </html>

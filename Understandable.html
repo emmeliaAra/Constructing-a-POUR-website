@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Emmeleia Arakleitou">
     <link href="StylingProperties.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> Constructing a POUR website - Understandable</title>
-    <script src="jquery.js"></script>
-    <script>
-      $(function(){
-        $("#page_header1").load("AccessibilityPrincicplesMainTemplate.html");
-      });
-      </script>
   </head>
 
   <body>
-    <div id="page_header1"></div>
     <div id ="page_content">
     <header class="understandable_hder">
       <div class="understandable">
         <h2> Understandable </h2>
         <p>Understandable websites are consistent in its format and presentation, simple and easy to use and comprehend, predictable in its design and usage patterns. Information and user interface are understandable by all users.</p>
+        <div id="under_guid">
           <h3> Guidelines under “understandable” principle </h3>
           <ol>
             <li>Guideline 3.1: Readable content.</li>
             <li>Guideline 3.2: Predictable webpages.</li>
             <li>Guideline 3.3: Help users avoid and correct mistakes.</li>
           </ol>
+        </div>
+        <div id="under_examp">
           <h3>Examples of "Understandable" websites </h3>
           <ul>
             <li>A website that requires the user to fill in a form must inform the users of any errors.</li>
             <li>A Website must declare the meaning of all abbreviations, acronyms and jargon used. </li>
             <li>Websites that consists of multiple links must display the links in the same order in every web page so that users don’t need to memorize navigation steps for each web page.</li>
           </ul>
+        </div>
+        <div id="under_tech">
           <h3>Techniques to build understandable web sites based on the guidelines</h3>
           <ol>
             <li>
@@ -72,8 +71,64 @@
               <p class="example"> In the case that the user submits a form with invalid information in any of the fields, the server must retain the content of the form and return it indicating that an error occured.The error must be clearly described and the field that the error appeared myst be indicated so that the user can correrct the mistake easily.</p>
             </li>
           </ol>
+        </div>
       </div>
     </header>
   </div>
+
+  <header class = "page_header1">
+    <h1> Constructing a POUR website</h1>
+    <p> by Emmeleia Arakleitou</p>
+  </header>
+  <div class="content_list">
+      <button class="dropdown-btn">Web Accessibility<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="AccessibilityPrinciples.html#what_is_web_acc"> What is web Accessibility</a>
+        <a href="AccessibilityPrinciples.html#importance_of_acc"> Motivations</a>
+        <a href="AccessibilityPrinciples.html#wai"> WAI </a>
+      </div>
+      <button class="dropdown-btn">Perceivable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Perceivable.html#per_guid"> Guidelines</a>
+        <a href="Perceivable.html#perc_examp">Examples</a>
+        <a href="Perceivable.html#perc_tech">Techniques</a>
+      </div>
+      <button class="dropdown-btn">Operable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Operable.html#oper_guid">Guidelines</a>
+        <a href="Operable.html#oper_examp">Examples</a>
+        <a href="Operable.html#oper_tech"> Techniques</a>
+      </div>
+      <button class="dropdown-btn">Understandable<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Understandable.html#under_guid">Guidelines</a>
+        <a href="Understandable.html#under_examp">Examples</a>
+        <a href="Understandable.html#under_tech"> Techniques</a>
+      </div>
+      <button class="dropdown-btn">Robust<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown_content">
+        <a href="Robust.html#rob_guid">Guidelines</a>
+        <a href="Robust.html#rob_examp">Examples</a>
+        <a href="Robust.html#rob_tech">Techniques</a>
+      </div>
+    </div>
+
+    <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
   </body>
   </html>
