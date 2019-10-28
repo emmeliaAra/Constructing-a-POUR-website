@@ -1,12 +1,22 @@
+/* Fromat of the file: color and family file
+ * Remove any default margin and padding if any
+ * Font Colour: dark blue (#10244D)
+ */
 html,body{
-  /*remove any default margin and padding if any*/
   margin:0;
   color:#10244D; /*Dark blue */
+  font-size: 18px;
   font-family:sans-serif,"Times New Roman","Arial Black",serif;
 }
 
+/* Format the page's h1.
+ * z-index:1 - So that it will always appear on top and when scolling down content will be hidden underneath
+ * font color : white ( #FFFFFF)
+ * background : dark blue (#10244D;)
+ * font family: Verdana,Georgia,"Arial Black",serif, sans-serif
+ */
 header.page_header1{
-  z-index: 1; /*So that it will always appear on top and when scolling down content will be hidden underneath */
+  z-index: 1;
   position: fixed;
   top:0;
   width: 100%;
@@ -22,24 +32,34 @@ header h1{
   margin: 0;
 }
 
+/* Make the paragraph in the header italic*/
 header p{
   font-style: italic;
 }
 
+/* This is formating the page content.
+ * Is placing the content next to the table of content and below the page header.
+ */
 #page_content{
   display: block;
-  position: absolute;
+  position:absolute;
   top:100px;
   left: 230px;
 }
 
+/* This is to make the font bold*/
 .imp_text {
   font-weight: bold;
 }
+
+/* this is to avoid changing a line when a <p> is used */
 .text_inline{
   display: inline;
 }
 
+/* This is to modify the example class
+ * Create a boarder and place it into the center of the page.
+ */
 .example{
   padding: 5px;
   position: relative;
@@ -49,11 +69,12 @@ header p{
   border-color: #6D8CCD;
   border-width: 5px;
 }
-
+/* Adds paddding to the image of example1 div section */
 #per_tech1_example img{
   padding: 0;
 }
 
+/* Modifies the text of the example */
 #per_tech1_example p{
   position: absolute;
   bottom: 60px;
@@ -62,18 +83,20 @@ header p{
   font-weight: bold;
 }
 
-.perceivable img{
+/* modifies the images
+ * adds padding
+ */
+img{
   position: relative;
   padding-left: 200px;
 }
 
-.understandable img{
-    position: relative;
-    padding-left: 200px;
-}
-
-
-/*FOR CONTENT LIST */
+/* FOR CONTENT LIST
+ * place the div in a fixed position and sets bottom to 0 so that the div will expand all the way to the bottom of the page
+ * sets colour to black (#00000)
+ * and the background to light blue (#6D8CCD)
+ * font family: sans-serif,"Times New Roman","Arial Black",serif;
+ */
 
 .content_list{
   display: block;
@@ -86,7 +109,11 @@ header p{
   font-family:sans-serif,"Times New Roman","Arial Black",serif;
 }
 
-/* Style the sidenav links and the dropdown button */
+/* Style the content_list links and the dropdown button
+ * Add padding
+ * sets color to black (#000000)
+ *
+ */
 .content_list a, .dropdown-btn {
   display: block;
   width: 100%;
@@ -104,8 +131,7 @@ header p{
   cursor: pointer;
 }
 
-
-/* Dropdown container (hidden by default).*/
+/* Dropdown container (hidden by default) and becomes visible when the button is cliked.*/
 .dropdown_content {
   display: none;
   background-color: #9FB6DF;
