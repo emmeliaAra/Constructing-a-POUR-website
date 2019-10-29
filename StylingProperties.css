@@ -37,6 +37,11 @@ header p{
   font-style: italic;
 }
 
+h1,h2,h3,h4,h5,h6{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 /* This is formating the page content.
  * Is placing the content next to the table of content and below the page header.
  */
@@ -94,7 +99,7 @@ img{
 /* FOR CONTENT LIST
  * place the div in a fixed position and sets bottom to 0 so that the div will expand all the way to the bottom of the page
  * sets colour to black (#00000)
- * and the background to light blue (#6D8CCD)
+ * and the background to light blue (#4067BA)
  * font family: sans-serif,"Times New Roman","Arial Black",serif;
  */
 
@@ -104,7 +109,7 @@ img{
 	width: 200px;
 	top: 100px;
 	bottom: 0;
-  background-color:#6D8CCD;
+  background-color:#5073C3;
   color: #000000;
   font-family:sans-serif,"Times New Roman","Arial Black",serif;
 }
@@ -117,7 +122,7 @@ img{
 .content_list a, .dropdown-btn {
   display: block;
   width: 100%;
-  padding: 5px 8px 5px 8px;
+  padding: 10px 10px 10px 10px;
   font-size: 20px;
   color: #000000;
   width: 100%;
@@ -135,7 +140,10 @@ img{
 .dropdown_content {
   display: none;
   background-color: #9FB6DF;
-  padding-left: 8px;
+}
+
+.dropdown_content a{
+  width: 90%;
 }
 
 .content_list a:link {
@@ -144,13 +152,24 @@ img{
 .content_list a:visited {
 	color: #000000;
 }
-.content_list a:hover {
+.content_list a:hover, .dropdown-btn:hover {
+  background-color: #305791;
 	color:#FFFFFF;
+  text-decoration:underline;
 }
+
 .content_list  a:active {
 	color: #000000;
 }
 
 .fa-caret-down{
   padding-left: 5px;
+}
+
+.hidden_link_text{
+  display: none;
+}
+
+.skipNavigation{
+  display: none;
 }
