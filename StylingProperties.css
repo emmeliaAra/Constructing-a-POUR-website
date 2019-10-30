@@ -142,34 +142,39 @@ img{
   background-color: #9FB6DF;
 }
 
+/* Make them smaller so that thet fit in the list (because they star 10px on the lef)*/
 .dropdown_content a{
   width: 90%;
 }
 
+/* /make the links black in the content lis */
 .content_list a:link {
 	color: #000000;
 }
+
+/* keep the links black when visisted */
 .content_list a:visited {
 	color: #000000;
 }
+
+/*change  the background and  text colour of the links and underline them when hovering*/
 .content_list a:hover, .dropdown-btn:hover {
   background-color: #305791;
 	color:#FFFFFF;
   text-decoration:underline;
 }
 
+/* keep the link's text black when activated*/
 .content_list  a:active {
 	color: #000000;
 }
 
+/* add padding to the arrow on the buttons*/
 .fa-caret-down{
   padding-left: 5px;
 }
 
-.hidden_link_text{
-  display: none;
-}
-
-.skipNavigation{
+/* used to hide descriptive text of the linkes and the navigation link when css in enabled */
+.hidden_link_text, .skipNavigation{
   display: none;
 }
